@@ -9,12 +9,14 @@ function validarFormulario(){
     let genero = document.getElementById('selectGenero');
     let contrasena = document.getElementById('inputContrasena');
     let repetirContrasena = document.getElementById('inputRepetirContrasena');
+    let mensajeError = ''
 
     if(nombre.value == ''){
-        alert('El campo NOMBRE es obligatorio');
+        mensajeError = mensajeError + 'El campo NOMBRE es obligatorio \n'
         nombre.classList.add('elementoInvalido');
     }else{
-        alert('Nombre ingresado!');
         nombre.classList.remove('elementoInvalido');
     }
+
+    alert(mensajeError);
 };
