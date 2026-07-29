@@ -34,7 +34,8 @@
                             <a class="nav-link" href="https://www.google.com">Google</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.complejoprincipedegales.cl" target="_blank">Príncipe de Gales</a>
+                            <a class="nav-link" href="https://www.complejoprincipedegales.cl" target="_blank">Príncipe
+                                de Gales</a>
                         </li>
                     </ul>
                 </div>
@@ -49,12 +50,14 @@
             <div class="row">
                 <div class="col">
                     <label for="inputNombre" class="form-label">Nombre: </label>
-                    <input type="text" name="nombre" id="inputNombre" class="form-control">
+                    <input type="text" name="nombre" id="inputNombre" class="form-control" required maxlength="50">
                 </div>
 
                 <div class="col">
                     <label for="inputCorreo" class="form-label">Email: </label>
-                    <input type="email" name="correo" id="inputCorreo" class="form-control">
+                    <input type="email" name="correo" id="inputCorreo" class="form-control" required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    title="Correo inválido">
                 </div>
 
                 <div class="col">
@@ -72,7 +75,8 @@
 
                 <div class="col">
                     <label for="inputRut" class="form-label">RUT: </label>
-                    <input type="text" name="rut" id="inputRut" class="form-control">
+                    <input type="text" name="rut" id="inputRut" class="form-control" required minlength="10"
+                        maxlength="12">
                 </div>
 
                 <div class="col">
@@ -90,17 +94,24 @@
             <div class="row">
                 <div class="col">
                     <label for="inputContrasena" class="form-label">Contraseña: </label>
-                    <input type="password" name="contrasena" id="inputContrasena" class="form-control">
+                    <input type="password" name="contrasena" id="inputContrasena" class="form-control" required
+                        minlength="8"
+                        title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un símbolo."
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}$">
                 </div>
 
                 <div class="col">
                     <label for="inputContrasena" class="form-label">Repetir Contraseña: </label>
-                    <input type="password" name="repetirContrasena" id="inputRepetirContrasena" class="form-control">
+                    <input type="password" name="repetirContrasena" id="inputRepetirContrasena" class="form-control"
+                        required minlength="8"
+                        title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un símbolo."
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}$">
                 </div>
             </div>
             <br>
 
             <div class="d-flex justify-content-end">
+                <input type="submit" value="Guardar" class="btn btn-primary me-2">
                 <button class="btn btn-secondary me-2">Cancelar</button>
                 <button class="btn btn-primary">Enviar</button>
             </div>
