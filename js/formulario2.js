@@ -1,13 +1,20 @@
-alert("Cargando un script desde un archivo externo...");
-
-let nombre = document.getElementById('inputNombre');
-alert(nombre);
-
-function cambiarFondo(){
+function validarFormulario(){
     event.preventDefault();
-    document.body.style.backgroundColor = '#D8F999';
-};
+    
+    let nombre = document.getElementById('inputNombre');
+    let correo = document.getElementById('inputCorreo');
+    let telefono = document.getElementById('inputTelefono');
+    let fechaNacimiento = document.getElementById('inputFechaNacimiento');
+    let rut = document.getElementById('inputRut');
+    let genero = document.getElementById('selectGenero');
+    let contrasena = document.getElementById('inputContrasena');
+    let repetirContrasena = document.getElementById('inputRepetirContrasena');
 
-function cargarAlerta(){
-    alert('Cambiando el contenido del elemento HTML!');
-}
+    if(nombre.value == ''){
+        alert('El campo NOMBRE es obligatorio');
+        nombre.classList.add('elementoInvalido');
+    }else{
+        alert('Nombre ingresado!');
+        nombre.classList.remove('elementoInvalido');
+    }
+};
