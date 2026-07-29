@@ -1,0 +1,1 @@
+alert("Cargando un script desde un archivo externo...");
