@@ -1,3 +1,9 @@
+window.onload = function(){
+    const alertaNombre = document.getElementById('alertaNombre');
+
+    alertaNombre.style.display = 'none';
+}
+
 function validarFormulario() {
     event.preventDefault();
 
