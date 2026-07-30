@@ -40,68 +40,66 @@ function validarFormulario() {
     let alertaContrasena = document.getElementById('alertaContrasena');
     let alertaRepetirContrasena = document.getElementById('alertaRepetirContrasena');
 
-    let mensajeError = ''
-
     if (nombre.value == '') {
-        mensajeError = mensajeError + 'El campo NOMBRE es obligatorio \n'
         nombre.classList.add('elementoInvalido');
         alertaNombre.style.display = 'block';
+        alertaNombre.textContent = 'El campo NOMBRE es obligatorio';
     } else {
         nombre.classList.remove('elementoInvalido');
         alertaNombre.style.display = 'none';
     }
     if (correo.value == '') {
-        mensajeError = mensajeError + 'El campo CORREO es obligatorio \n'
         correo.classList.add('elementoInvalido');
         alertaEmail.style.display = 'block';
+        alertaEmail.textContent = 'El campo CORREO es obligatorio'
     } else {
         correo.classList.remove('elementoInvalido');
         alertaEmail.style.display = 'none';
     }
     if (telefono.value == '') {
-        mensajeError = mensajeError + 'El campo TELÉFONO es obligatorio \n'
         telefono.classList.add('elementoInvalido');
         alertaTelefono.style.display = 'block';
+        alertaTelefono.textContent = 'El campo TELÉFONO es obligatorio'
     } else {
         telefono.classList.remove('elementoInvalido');
         alertaTelefono.style.display = 'none';
     }
     if (fechaNacimiento.value == '') {
-        mensajeError = mensajeError + 'El campo FECHA NACIMIENTO es obligatorio \n'
         fechaNacimiento.classList.add('elementoInvalido');
         alertaFechaNacimiento.style.display = 'block';
+        alertaFechaNacimiento.textContent = 'El campo FECHA NACIMIENTO es obligatorio'
     } else {
         fechaNacimiento.classList.remove('elementoInvalido');
         alertaFechaNacimiento.style.display = 'none';
     }
     if (rut.value == '') {
-        mensajeError = mensajeError + 'El campo RUT es obligatorio \n'
         rut.classList.add('elementoInvalido');
         alertaRut.style.display = 'block';
+        alertaRut.textContent = 'El campo RUT es obligatorio'
     } else {
         rut.classList.remove('elementoInvalido');
         alertaRut.style.display = 'none';
     }
     if (genero.value == '') {
-        mensajeError = mensajeError + 'El campo GÉNERO es obligatorio \n'
         genero.classList.add('elementoInvalido');
         alertaGenero.style.display = 'block';
+        alertaGenero.textContent = 'El campo GÉNERO es obligatorio'
     } else {
         genero.classList.remove('elementoInvalido');
         alertaGenero.style.display = 'none';
     }
     if (contrasena.value == '') {
-        mensajeError = mensajeError + 'El campo CONTRASEÑA es obligatorio \n'
         contrasena.classList.add('elementoInvalido');
         alertaContrasena.style.display = 'block';
+        alertaContrasena.textContent = 'El campo CONTRASEÑA es obligatorio'
     } else {
         contrasena.classList.remove('elementoInvalido');
         alertaContrasena.style.display = 'none';
     }
     if (repetirContrasena.value == '') {
-        mensajeError = mensajeError + 'El campo REPETIR CONTRASEÑA es obligatorio \n'
         repetirContrasena.classList.add('elementoInvalido');
         alertaRepetirContrasena.style.display = 'block';
+        alertaRepetirContrasena.textContent = 'El campo REPETIR CONTRASEÑA es obligatorio'
     } else {
         repetirContrasena.classList.remove('elementoInvalido');
         alertaRepetirContrasena.style.display = 'none';
@@ -110,7 +108,7 @@ function validarFormulario() {
     if (mensajeError == '') {
         alert('Formulario Correcto, enviando datos al servidor...')
     } else {
-        alert(mensajeError);
+        alert('Faltan datos, Revise su Formulario');
     }
 
 };
