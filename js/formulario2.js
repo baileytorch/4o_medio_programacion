@@ -1,6 +1,6 @@
-function validarFormulario(){
+function validarFormulario() {
     event.preventDefault();
-    
+
     let nombre = document.getElementById('inputNombre');
     let correo = document.getElementById('inputCorreo');
     let telefono = document.getElementById('inputTelefono');
@@ -11,12 +11,17 @@ function validarFormulario(){
     let repetirContrasena = document.getElementById('inputRepetirContrasena');
     let mensajeError = ''
 
-    if(nombre.value == ''){
+    if (nombre.value == '') {
         mensajeError = mensajeError + 'El campo NOMBRE es obligatorio \n'
         nombre.classList.add('elementoInvalido');
-    }else{
+    } else {
         nombre.classList.remove('elementoInvalido');
     }
 
-    alert(mensajeError);
+    if (mensajeError == '') { 
+        alert('Formulario Correcto, enviando datos al servidor...')
+    } else { 
+        alert(mensajeError); 
+    }
+
 };
