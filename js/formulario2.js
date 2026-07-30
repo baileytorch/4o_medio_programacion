@@ -104,11 +104,4 @@ function validarFormulario() {
         repetirContrasena.classList.remove('elementoInvalido');
         alertaRepetirContrasena.style.display = 'none';
     }
-
-    if (mensajeError == '') {
-        alert('Formulario Correcto, enviando datos al servidor...')
-    } else {
-        alert('Faltan datos, Revise su Formulario');
-    }
-
 };
